@@ -14,4 +14,3 @@ It showcases my projects, skills, and resume.
 ## Future Improvements
 - Add more interactive design (JavaScript)
 - Dark mode toggle
-- Blog section
