@@ -3,7 +3,7 @@
 This is my personal portfolio website, built with HTML and CSS, and hosted using GitHub Pages.  
 It showcases my projects, skills, and resume.
 
-**Live site:** [https://advik-singh.github.io](https://advik-singh.github.io)
+**Live site:** [https://advik-singh.github.io]([https://advik-singh.github.io](https://cookies101-cookies.github.io/Portfolio/))
 
 ## Features
 - About Me section
