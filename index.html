@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advik Singh — Portfolio</title>
+  <meta name="description" content="Advik Singh — student, aspiring electrical engineer. Projects, resume, and contact." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071025 0%,var(--bg) 100%);color:#e6eef6;line-height:1.45}
+    .container{max-width:1000px;margin:0 auto;padding:32px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c5cff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021018}
+    h1{font-size:20px;margin:0}
+    .tag{font-size:13px;color:var(--muted)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;background:var(--glass);padding:22px;border-radius:var(--radius);align-items:center}
+    .hero .lead{font-size:20px;font-weight:600}
+    .hero p{margin:8px 0 0;color:var(--muted)}
+    .cta{display:inline-block;margin-top:10px;padding:9px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
+    .cta:hover{border-color:var(--accent);color:var(--accent)}
+
+    /* Sections */
+    section{margin-top:28px}
+    .section-title{display:flex;align-items:center;gap:12px}
+    .section-title h2{margin:0;font-size:18px}
+    .section-title p{margin:0;color:var(--muted);font-size:13px}
+
+    /* Projects grid */
+    .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:14px;margin-top:14px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .meta{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .links{margin-left:auto}
+    .card .img{height:120px;border-radius:8px;background:linear-gradient(135deg,#12212a,#071a1f);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+
+    /* Resume */
+    .resume{display:flex;gap:16px;align-items:center}
+    .resume .resume-box{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+
+    /* Contact */
+    .contact .input, .contact .textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#061018;color:inherit}
+    .contact .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#021018;font-weight:700;border:none;cursor:pointer}
+
+    footer{margin:36px 0 6px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* Responsive */
+    @media(min-width:760px){
+      .hero{grid-template-columns:1fr 340px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .card .img{height:140px}
+    }
+    @media(min-width:1100px){
+      .container{padding:48px}
+      .grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    /* small helpers */
+    .row{display:flex;align-items:center}
+    .spacer{height:8px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">AS</div>
+        <div>
+          <h1>Advik Singh</h1>
+          <div class="tag">Student · Aspiring Electrical Engineer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="lead">Hi — I’m Advik. I build small software & hardware projects and I’m learning circuit design and programming.</div>
+          <p>I’m a 10th grade student interested in Electrical Engineering, AI, and consumer electronics. This site shows a selection of my projects, skills, and how to contact me.</p>
+          <a class="cta" href="#projects">See Projects</a>
+        </div>
+        <div class="card">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <strong style="font-size:14px">Quick Links</strong>
+            <div style="display:flex;flex-direction:column;gap:8px;width:100%">
+              <a href="#projects" style="color:var(--muted);text-decoration:none">Projects</a>
+              <a href="#resume" style="color:var(--muted);text-decoration:none">Resume (PDF)</a>
+              <a href="https://github.com/yourusername" style="color:var(--muted);text-decoration:none" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-title"><h2>About Me</h2><p>— short bio & goals</p></div>
+        <div class="spacer"></div>
+        <div class="card" style="display:flex;gap:14px;align-items:center">
+          <div style="width:120px;height:120px;border-radius:12px;overflow:hidden;background:#071018;display:flex;align-items:center;justify-content:center">Photo</div>
+          <div>
+            <p style="margin:0 0 8px;color:var(--muted)">I’m a 15-year-old student currently in 10th grade. I’ve been passionate about technology since I was a child—watching creators like MKBHD helped me explore consumer electronics and software. I’m learning circuit design, programming in Go and Python, and building small projects that combine hardware and software.</p>
+            <div class="row" style="gap:10px;margin-top:8px">
+              <div class="chip">Electrical Engineering (future major)</div>
+              <div class="chip">Circuits • Arduino</div>
+              <div class="chip">Go • Python • HTML/CSS</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-title"><h2>Projects</h2><p>— selected work (4–6 examples)</p></div>
+        <div class="grid">
+          <article class="card">
+            <div class="img">Project Image</div>
+            <h3>Lost and Found Tracker</h3>
+            <p>Web app to post and search lost & found items. Built with Go and SQLite. I designed the backend structure and implemented search features.</p>
+            <div class="meta">
+              <span class="chip">Go</span>
+              <span class="chip">SQLite</span>
+              <a class="chip" href="https://github.com/yourusername/lost-and-found" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="img">Portfolio Site</div>
+            <h3>Personal Portfolio</h3>
+            <p>One-page site to showcase my projects and resume. Built with HTML/CSS and served through GitHub Pages.</p>
+            <div class="meta">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <a class="chip" href="https://github.com/yourusername/portfolio" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="img">Circuit Photo</div>
+            <h3>Arduino LED + Sensors</h3>
+            <p>Small breadboard project using an Arduino to control LEDs and read a light sensor. Learned analog reads and debouncing switches.</p>
+            <div class="meta">
+              <span class="chip">Arduino</span>
+              <span class="chip">Electronics</span>
+              <a class="chip" href="#">Photos</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="img">Script Icon</div>
+            <h3>Python Automation Scripts</h3>
+            <p>Collection of small scripts for file organization and simple data tasks. Focused on clean code and reusability.</p>
+            <div class="meta">
+              <span class="chip">Python</span>
+              <span class="chip">Scripting</span>
+              <a class="chip" href="https://github.com/yourusername" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="resume">
+        <div class="section-title"><h2>Resume</h2><p>— download or view</p></div>
+        <div class="spacer"></div>
+        <div class="resume card">
+          <div class="resume-box">Education: 10th grade • School name</div>
+          <div class="resume-box"><a href="/resume.pdf" style="color:var(--muted);text-decoration:none">Download PDF</a></div>
+          <div class="resume-box"><a href="/resume.pdf" style="color:var(--muted);text-decoration:none" target="_blank">Open</a></div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="section-title"><h2>Contact</h2><p>— get in touch</p></div>
+        <div class="spacer"></div>
+        <div class="card">
+          <p style="color:var(--muted);margin:0 0 10px">Prefer email: <a href="mailto:your.email@example.com" style="color:var(--accent);text-decoration:none">your.email@example.com</a></p>
+          <form onsubmit="handleContact(event)">
+            <input class="input" id="name" placeholder="Your name" required />
+            <div style="height:10px"></div>
+            <input class="input" id="email" placeholder="Your email" type="email" required />
+            <div style="height:10px"></div>
+            <textarea class="textarea" id="message" rows="4" placeholder="Message (brief)" required></textarea>
+            <div style="height:12px"></div>
+            <button class="btn" type="submit">Send (opens email)</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>© Advik Singh — <span id="year"></span></footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
