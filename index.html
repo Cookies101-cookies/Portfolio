@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f1724; 
+      --bg:#0f1724;
       --card:#0b1220;
       --muted:#9aa4b2;
-      --accent:#06b6d4; 
+      --accent:#06b6d4;
       --glass: rgba(255,255,255,0.03);
       --radius:14px;
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
@@ -50,27 +50,7 @@
     .card p{margin:0;color:var(--muted);font-size:14px}
     .meta{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
     .chip{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
-    .links{margin-left:auto}
-
-    /* Image handling */
-    .card .img {
-      width: 100%;
-      height: 140px;
-      border-radius: 8px;
-      background: linear-gradient(135deg,#12212a,#071a1f);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-size: 13px;
-      overflow: hidden;
-    }
-    .card .img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .card .img{height:200px;border-radius:8px;background:linear-gradient(135deg,#12212a,#071a1f);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
 
     /* Resume */
     .resume{display:flex;gap:16px;align-items:center}
@@ -86,16 +66,17 @@
     @media(min-width:760px){
       .hero{grid-template-columns:1fr 340px}
       .grid{grid-template-columns:repeat(2,1fr)}
+      .card .img{height:240px}
     }
     @media(min-width:1100px){
       .container{padding:48px}
       .grid{grid-template-columns:repeat(3,1fr)}
+      .card .img{height:280px}
     }
 
     /* small helpers */
     .row{display:flex;align-items:center}
     .spacer{height:8px}
-
   </style>
 </head>
 <body>
@@ -152,7 +133,6 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
       <section id="projects">
         <div class="section-title"><h2>Projects</h2><p>— selected work (4–6 examples)</p></div>
         <div class="grid">
@@ -180,9 +160,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_0073.png" alt="Weather App">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/IMG_0073.png" alt="Weather App" class="img">
             <h3>Weather App</h3>
             <p>A web app that fetches live weather data using APIs. Displays current temperature, forecast, and other weather info in a clean interface.</p>
             <div class="meta">
@@ -193,9 +171,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/Screenshot 2025-09-21 094142.png" alt="Face Detector">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/Screenshot_2025-09-21_094142.png" alt="Face Detector" class="img">
             <h3>Face-Detector</h3>
             <p>A Python program to detect faces in images using OpenCV. Demonstrates real-time face recognition and bounding boxes.</p>
             <div class="meta">
@@ -206,9 +182,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_0075.png" alt="Resource Monitor">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/IMG_0075.png" alt="Resource Monitor" class="img">
             <h3>Resource-Usage-Monitor</h3>
             <p>Tracks CPU, memory, and disk usage on a system in real-time. Built with Python for learning system monitoring concepts.</p>
             <div class="meta">
@@ -219,9 +193,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/Screenshot 2025-09-21 094518.png" alt="Notes App">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/Screenshot_2025-09-21_094518.png" alt="Notes App" class="img">
             <h3>Notes-App</h3>
             <p>A simple desktop application built with Python and Tkinter to write, save, and manage notes. Focused on a clean, functional interface.</p>
             <div class="meta">
@@ -234,7 +206,6 @@
         </div>
       </section>
 
-      <!-- Resume Section -->
       <section id="resume">
         <div class="section-title"><h2>Resume</h2><p>— download or view</p></div>
         <div class="spacer"></div>
@@ -245,7 +216,6 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
       <section id="contact" class="contact">
         <div class="section-title"><h2>Contact</h2><p>— get in touch</p></div>
         <div class="spacer"></div>
