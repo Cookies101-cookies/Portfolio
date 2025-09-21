@@ -21,7 +21,6 @@
     body{margin:0;background:linear-gradient(180deg,#071025 0%,var(--bg) 100%);color:#e6eef6;line-height:1.45}
     .container{max-width:1000px;margin:0 auto;padding:32px}
 
-    /* Header */
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
     .brand{display:flex;gap:14px;align-items:center}
     .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c5cff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021018}
@@ -30,55 +29,45 @@
     nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
     nav a:hover{color:var(--accent)}
 
-    /* Hero */
     .hero{display:grid;grid-template-columns:1fr;gap:18px;background:var(--glass);padding:22px;border-radius:var(--radius);align-items:center}
     .hero .lead{font-size:20px;font-weight:600}
     .hero p{margin:8px 0 0;color:var(--muted)}
     .cta{display:inline-block;margin-top:10px;padding:9px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
     .cta:hover{border-color:var(--accent);color:var(--accent)}
 
-    /* Sections */
     section{margin-top:28px}
     .section-title{display:flex;align-items:center;gap:12px}
     .section-title h2{margin:0;font-size:18px}
     .section-title p{margin:0;color:var(--muted);font-size:13px}
 
-    
-    /* Projects grid */
     .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:14px;margin-top:14px}
     .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
     .card h3{margin:0 0 6px;font-size:16px}
     .card p{margin:0;color:var(--muted);font-size:14px}
     .meta{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
     .chip{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
-    .card .img{height:200px;border-radius:8px;background:linear-gradient(135deg,#12212a,#071a1f);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
 
-    /* Resume */
     .resume{display:flex;gap:16px;align-items:center}
     .resume .resume-box{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
 
-    /* Contact */
     .contact .input, .contact .textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#061018;color:inherit}
     .contact .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#021018;font-weight:700;border:none;cursor:pointer}
 
     footer{margin:36px 0 6px;color:var(--muted);text-align:center;font-size:13px}
 
-    /* Responsive */
     @media(min-width:760px){
       .hero{grid-template-columns:1fr 340px}
       .grid{grid-template-columns:repeat(2,1fr)}
-      .card .img{height:240px}
+      .card img{height:200px}
     }
     @media(min-width:1100px){
       .container{padding:48px}
       .grid{grid-template-columns:repeat(3,1fr)}
-      .card .img{height:280px}
     }
 
-    /* small helpers */
     .row{display:flex;align-items:center}
     .spacer{height:8px}
-
   </style>
 </head>
 <body>
@@ -123,11 +112,13 @@
         <div class="section-title"><h2>About Me</h2><p>— short bio & goals</p></div>
         <div class="spacer"></div>
         <div class="card" style="display:flex;gap:14px;align-items:center">
-          <div style="width:300px;height:220px;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <div style="width:300px;height:220px;border-radius:12px;overflow:hidden;background:#071018;display:flex;align-items:center;justify-content:center">
             <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_3506.JPEG" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover">
           </div>
           <div>
-            <p style="margin:0 0 8px;color:var(--muted)">I’m a 15-year-old student currently in 10th grade. I’ve been passionate about technology since I was a child. I’m learning circuit design, programming (Python, Go, HTML/CSS, etc), and building small projects that combine hardware and software.</p>
+            <p style="margin:0 0 8px;color:var(--muted)">
+              I’m a 15-year-old student currently in 10th grade. I’ve been passionate about technology since I was a child. I’m learning circuit design, programming (Python, Go, HTML/CSS, etc.), and building small projects that combine hardware and software.
+            </p>
             <div class="row" style="gap:10px;margin-top:8px">
               <div class="chip">Electrical Engineering (future major)</div>
               <div class="chip">Circuits • Arduino</div>
@@ -137,13 +128,12 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
       <section id="projects">
         <div class="section-title"><h2>Projects</h2><p>— selected work</p></div>
         <div class="grid">
 
           <article class="card">
-            <div class="img">Project Image</div>
+            <img src="Images/LostAndFound.png" alt="Lost and Found Tracker">
             <h3>Lost and Found Tracker</h3>
             <p>Web app to post and search lost & found items. Built with Go and SQLite. I designed the backend structure and implemented search features.</p>
             <div class="meta">
@@ -154,7 +144,7 @@
           </article>
 
           <article class="card">
-            <div class="img">Portfolio Site</div>
+            <img src="Images/Portfolio.png" alt="Portfolio Site">
             <h3>Personal Portfolio</h3>
             <p>One-page site to showcase my projects and resume. Built with HTML/CSS and served through GitHub Pages.</p>
             <div class="meta">
@@ -165,9 +155,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_0073.png" alt="Weather App">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_0073.png" alt="Weather App">
             <h3>Weather App</h3>
             <p>A web app that fetches live weather data using APIs. Displays current temperature, forecast, and other weather info in a clean interface.</p>
             <div class="meta">
@@ -179,9 +167,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/Screenshot 2025-09-21 094142.png" alt="Face Detector">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/Screenshot 2025-09-21 094142.png" alt="Face Detector">
             <h3>Face Detector</h3>
             <p>A Python program to detect faces in images using OpenCV. Demonstrates real-time face recognition and bounding boxes.</p>
             <div class="meta">
@@ -192,9 +178,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_0075.png" alt="Resource Monitor">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_0075.png" alt="Resource Usage Monitor">
             <h3>Resource Usage Monitor</h3>
             <p>Tracks CPU, memory, and disk usage on a system in real-time. Built with Python for learning system monitoring concepts.</p>
             <div class="meta">
@@ -205,9 +189,7 @@
           </article>
 
           <article class="card">
-            <div class="img">
-              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/Screenshot 2025-09-21 094518.png" alt="Notes App">
-            </div>
+            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/Screenshot 2025-09-21 094518.png" alt="Notes App">
             <h3>Notes App</h3>
             <p>A simple desktop application built with Python and Tkinter to write, save, and manage notes. Focused on a clean, functional interface.</p>
             <div class="meta">
@@ -220,18 +202,16 @@
         </div>
       </section>
 
-      <!-- Resume Section -->
       <section id="resume">
         <div class="section-title"><h2>Resume</h2><p>— download or view</p></div>
         <div class="spacer"></div>
         <div class="resume card">
-          <div class="resume-box">Education: 10th grade • School name</div>
+          <div class="resume-box">Education: 10th grade • James E. Taylor High School</div>
           <div class="resume-box"><a href="/resume.pdf" style="color:var(--muted);text-decoration:none">Download PDF</a></div>
           <div class="resume-box"><a href="/resume.pdf" style="color:var(--muted);text-decoration:none" target="_blank">Open</a></div>
         </div>
       </section>
 
-      <!-- Contact Section -->
       <section id="contact" class="contact">
         <div class="section-title"><h2>Contact</h2><p>— get in touch</p></div>
         <div class="spacer"></div>
