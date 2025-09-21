@@ -54,7 +54,8 @@
 
     /* Image handling */
     .card .img {
-      height: 200px;
+      width: 100%;
+      height: 140px;
       border-radius: 8px;
       background: linear-gradient(135deg,#12212a,#071a1f);
       display: flex;
@@ -62,6 +63,13 @@
       justify-content: center;
       color: var(--muted);
       font-size: 13px;
+      overflow: hidden;
+    }
+    .card .img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     /* Resume */
@@ -78,12 +86,10 @@
     @media(min-width:760px){
       .hero{grid-template-columns:1fr 340px}
       .grid{grid-template-columns:repeat(2,1fr)}
-      .card .img{height:240px}
     }
     @media(min-width:1100px){
       .container{padding:48px}
       .grid{grid-template-columns:repeat(3,1fr)}
-      .card .img{height:280px}
     }
 
     /* small helpers */
@@ -134,11 +140,11 @@
         <div class="section-title"><h2>About Me</h2><p>— short bio & goals</p></div>
         <div class="spacer"></div>
         <div class="card" style="display:flex;gap:14px;align-items:center">
-          <div style="width:300px;height:220px;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <div style="width:120px;height:120px;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center">
             <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/Images/IMG_3506.JPEG" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover">
           </div>
           <div>
-            <p style="margin:0 0 8px;color:var(--muted)">I’m a 15-year-old student currently in 10th grade. I’ve been passionate about technology since I was a child. I’m learning circuit design, programming (Python, Go, HTML/CSS, etc.), and building small projects that combine hardware and software.</p>
+            <p style="margin:0 0 8px;color:var(--muted)">I’m a 15-year-old student currently in 10th grade. I’ve been passionate about technology since I was a child—watching creators. I’m learning circuit design, programming in Python and Go, and building small projects that combine hardware and software.</p>
             <div class="row" style="gap:10px;margin-top:8px">
               <div class="chip">Electrical Engineering (future major)</div>
               <div class="chip">Circuits • Arduino</div>
@@ -279,8 +285,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
