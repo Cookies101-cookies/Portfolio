@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f1724; /* deep navy */
+      --bg:#0f1724; 
       --card:#0b1220;
       --muted:#9aa4b2;
-      --accent:#06b6d4; /* teal */
+      --accent:#06b6d4; 
       --glass: rgba(255,255,255,0.03);
       --radius:14px;
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
@@ -51,7 +51,26 @@
     .meta{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
     .chip{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
     .links{margin-left:auto}
-    .card .img{height:120px;border-radius:8px;background:linear-gradient(135deg,#12212a,#071a1f);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+
+    /* Image handling */
+    .card .img {
+      width: 100%;
+      height: 140px;
+      border-radius: 8px;
+      background: linear-gradient(135deg,#12212a,#071a1f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 13px;
+      overflow: hidden;
+    }
+    .card .img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     /* Resume */
     .resume{display:flex;gap:16px;align-items:center}
@@ -67,7 +86,6 @@
     @media(min-width:760px){
       .hero{grid-template-columns:1fr 340px}
       .grid{grid-template-columns:repeat(2,1fr)}
-      .card .img{height:140px}
     }
     @media(min-width:1100px){
       .container{padding:48px}
@@ -134,6 +152,7 @@
         </div>
       </section>
 
+      <!-- Projects Section -->
       <section id="projects">
         <div class="section-title"><h2>Projects</h2><p>— selected work (4–6 examples)</p></div>
         <div class="grid">
@@ -161,7 +180,9 @@
           </article>
 
           <article class="card">
-            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/IMG_0073.png" alt="Weather App" class="img">
+            <div class="img">
+              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/IMG_0073.png" alt="Weather App">
+            </div>
             <h3>Weather App</h3>
             <p>A web app that fetches live weather data using APIs. Displays current temperature, forecast, and other weather info in a clean interface.</p>
             <div class="meta">
@@ -172,7 +193,9 @@
           </article>
 
           <article class="card">
-            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/Screenshot 2025-09-21 094142.png" alt="Face Detector" class="img">
+            <div class="img">
+              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/Screenshot 2025-09-21 094142.png" alt="Face Detector">
+            </div>
             <h3>Face-Detector</h3>
             <p>A Python program to detect faces in images using OpenCV. Demonstrates real-time face recognition and bounding boxes.</p>
             <div class="meta">
@@ -183,7 +206,9 @@
           </article>
 
           <article class="card">
-            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/IMG_0075.png" alt="Resource Monitor" class="img">
+            <div class="img">
+              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/IMG_0075.png" alt="Resource Monitor">
+            </div>
             <h3>Resource-Usage-Monitor</h3>
             <p>Tracks CPU, memory, and disk usage on a system in real-time. Built with Python for learning system monitoring concepts.</p>
             <div class="meta">
@@ -194,7 +219,9 @@
           </article>
 
           <article class="card">
-            <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/Screenshot 2025-09-21 094518.png" alt="Notes App" class="img">
+            <div class="img">
+              <img src="https://raw.githubusercontent.com/Cookies101-cookies/Portfolio/main/images/Screenshot 2025-09-21 094518.png" alt="Notes App">
+            </div>
             <h3>Notes-App</h3>
             <p>A simple desktop application built with Python and Tkinter to write, save, and manage notes. Focused on a clean, functional interface.</p>
             <div class="meta">
@@ -207,50 +234,11 @@
         </div>
       </section>
 
+      <!-- Resume Section -->
       <section id="resume">
         <div class="section-title"><h2>Resume</h2><p>— download or view</p></div>
         <div class="spacer"></div>
         <div class="resume card">
           <div class="resume-box">Education: 10th grade • School name</div>
           <div class="resume-box"><a href="/resume.pdf" style="color:var(--muted);text-decoration:none">Download PDF</a></div>
-          <div class="resume-box"><a href="/resume.pdf" style="color:var(--muted);text-decoration:none" target="_blank">Open</a></div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <div class="section-title"><h2>Contact</h2><p>— get in touch</p></div>
-        <div class="spacer"></div>
-        <div class="card">
-          <p style="color:var(--muted);margin:0 0 10px">Prefer email: <a href="mailto:singhinalaska@gmail.com" style="color:var(--accent);text-decoration:none">singhinalaska@gmail.com</a></p>
-          <form onsubmit="handleContact(event)">
-            <input class="input" id="name" placeholder="Your name" required />
-            <div style="height:10px"></div>
-            <input class="input" id="email" placeholder="Your email" type="email" required />
-            <div style="height:10px"></div>
-            <textarea class="textarea" id="message" rows="4" placeholder="Message (brief)" required></textarea>
-            <div style="height:12px"></div>
-            <button class="btn" type="submit">Send (opens email)</button>
-          </form>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>© Advik Singh — <span id="year"></span></footer>
-  </div>
-
-  <script>
-    // small helpers
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function handleContact(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent('Portfolio contact from ' + name);
-      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-      window.location.href = `mailto:singhinalaska@gmail.com?subject=${subject}&body=${body}`;
-    }
-  </script>
-</body>
-</html>
+          <div class="resume-box"><a href="/resume.pdf" style
