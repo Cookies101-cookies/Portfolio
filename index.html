@@ -111,7 +111,8 @@
             <div style="display:flex;flex-direction:column;gap:8px;width:100%">
               <a href="#projects" style="color:var(--muted);text-decoration:none">Projects</a>
               <a href="#resume" style="color:var(--muted);text-decoration:none">Resume (PDF)</a>
-              <a href="https://github.com/yourusername" style="color:var(--muted);text-decoration:none" target="_blank">GitHub</a>
+              <a href="https://github.com/Cookies101-cookies" style="color:var(--muted);text-decoration:none" target="_blank">GitHub</a>
+              <a href="https://github.com/Cookies101-cookies/Portfolio" style="color:var(--muted);text-decoration:none" target="_blank">Portfolio Repo</a>
             </div>
           </div>
         </div>
@@ -123,7 +124,7 @@
         <div class="card" style="display:flex;gap:14px;align-items:center">
           <div style="width:120px;height:120px;border-radius:12px;overflow:hidden;background:#071018;display:flex;align-items:center;justify-content:center">Photo</div>
           <div>
-            <p style="margin:0 0 8px;color:var(--muted)">I’m a 15-year-old student currently in 10th grade. I’ve been passionate about technology since I was a child—watching creators like MKBHD helped me explore consumer electronics and software. I’m learning circuit design, programming in Go and Python, and building small projects that combine hardware and software.</p>
+            <p style="margin:0 0 8px;color:var(--muted)">I’m a 15-year-old student currently in 10th grade. I’ve been passionate about technology since I was a child—watching creators. I’m learning circuit design, programming in Python and Go, and building small projects that combine hardware and software.</p>
             <div class="row" style="gap:10px;margin-top:8px">
               <div class="chip">Electrical Engineering (future major)</div>
               <div class="chip">Circuits • Arduino</div>
@@ -136,6 +137,7 @@
       <section id="projects">
         <div class="section-title"><h2>Projects</h2><p>— selected work (4–6 examples)</p></div>
         <div class="grid">
+
           <article class="card">
             <div class="img">Project Image</div>
             <h3>Lost and Found Tracker</h3>
@@ -143,7 +145,7 @@
             <div class="meta">
               <span class="chip">Go</span>
               <span class="chip">SQLite</span>
-              <a class="chip" href="https://github.com/yourusername/lost-and-found" target="_blank">GitHub</a>
+              <a class="chip" href="https://github.com/Cookies101-cookies/lost-and-found" target="_blank">GitHub</a>
             </div>
           </article>
 
@@ -154,29 +156,51 @@
             <div class="meta">
               <span class="chip">HTML</span>
               <span class="chip">CSS</span>
-              <a class="chip" href="https://github.com/yourusername/portfolio" target="_blank">GitHub</a>
+              <a class="chip" href="https://github.com/Cookies101-cookies/Portfolio" target="_blank">GitHub</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="img">Circuit Photo</div>
-            <h3>Arduino LED + Sensors</h3>
-            <p>Small breadboard project using an Arduino to control LEDs and read a light sensor. Learned analog reads and debouncing switches.</p>
+            <div class="img">Weather App</div>
+            <h3>Weather App</h3>
+            <p>A web app that fetches live weather data using APIs. Displays current temperature, forecast, and other weather info in a clean interface.</p>
             <div class="meta">
-              <span class="chip">Arduino</span>
-              <span class="chip">Electronics</span>
-              <a class="chip" href="#">Photos</a>
+              <span class="chip">JavaScript</span>
+              <span class="chip">API</span>
+              <a class="chip" href="https://github.com/Cookies101-cookies/Weather-App" target="_blank">GitHub</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="img">Script Icon</div>
-            <h3>Python Automation Scripts</h3>
-            <p>Collection of small scripts for file organization and simple data tasks. Focused on clean code and reusability.</p>
+            <div class="img">Face Detector</div>
+            <h3>Face-Detector</h3>
+            <p>A Python program to detect faces in images using OpenCV. Demonstrates real-time face recognition and bounding boxes.</p>
             <div class="meta">
               <span class="chip">Python</span>
-              <span class="chip">Scripting</span>
-              <a class="chip" href="https://github.com/yourusername" target="_blank">GitHub</a>
+              <span class="chip">OpenCV</span>
+              <a class="chip" href="https://github.com/Cookies101-cookies/Face-Detector" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="img">Resource Monitor</div>
+            <h3>Resource-Usage-Monitor</h3>
+            <p>Tracks CPU, memory, and disk usage on a system in real-time. Built with Python for learning system monitoring concepts.</p>
+            <div class="meta">
+              <span class="chip">Python</span>
+              <span class="chip">System</span>
+              <a class="chip" href="https://github.com/Cookies101-cookies/Resource-Usage-Monitor" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="img">Notes App</div>
+            <h3>Notes-App</h3>
+            <p>A simple desktop application built with Python and Tkinter to write, save, and manage notes. Focused on a clean, functional interface.</p>
+            <div class="meta">
+              <span class="chip">Python</span>
+              <span class="chip">Tkinter</span>
+              <a class="chip" href="https://github.com/Cookies101-cookies/Notes-App" target="_blank">GitHub</a>
             </div>
           </article>
 
@@ -197,7 +221,7 @@
         <div class="section-title"><h2>Contact</h2><p>— get in touch</p></div>
         <div class="spacer"></div>
         <div class="card">
-          <p style="color:var(--muted);margin:0 0 10px">Prefer email: <a href="mailto:your.email@example.com" style="color:var(--accent);text-decoration:none">your.email@example.com</a></p>
+          <p style="color:var(--muted);margin:0 0 10px">Prefer email: <a href="mailto:singhinalaska@gmail.com" style="color:var(--accent);text-decoration:none">singhinalaska@gmail.com</a></p>
           <form onsubmit="handleContact(event)">
             <input class="input" id="name" placeholder="Your name" required />
             <div style="height:10px"></div>
@@ -216,7 +240,6 @@
   </div>
 
   <script>
-    // small helpers
     document.getElementById('year').textContent = new Date().getFullYear();
     function handleContact(e){
       e.preventDefault();
@@ -225,7 +248,7 @@
       const message = document.getElementById('message').value.trim();
       const subject = encodeURIComponent('Portfolio contact from ' + name);
       const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-      window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:singhinalaska@gmail.com?subject=${subject}&body=${body}`;
     }
   </script>
 </body>
