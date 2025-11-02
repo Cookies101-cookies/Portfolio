@@ -10,7 +10,3 @@ It showcases my projects, skills, and resume.
 - Projects with links to GitHub repos
 - Downloadable Resume
 - Contact section
-
-## Future Improvements
-- Add more interactive design (JavaScript)
-- Dark mode toggle
