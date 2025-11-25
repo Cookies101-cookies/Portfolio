@@ -3,7 +3,7 @@
   --card: #0b1220;
   --muted: #9aa4b2;
   --accent: #06b6d4;
-  --glass: rgba(255,255,255,0.03);
+  --glass: rgba(255, 255, 255, 0.03);
   --radius: 14px;
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
@@ -25,7 +25,7 @@ body {
   padding: 32px;
 }
 
-/* Header */
+/* ---------- Header ---------- */
 header {
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Hero Section */
+/* ---------- Hero Section ---------- */
 .hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -108,12 +108,12 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Quick Links */
+/* ---------- Quick Links ---------- */
 .quick-links {
-  background: rgba(255,255,255,0.03);
+  background: var(--glass);
   padding: 12px;
   border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.03);
+  border: 1px solid var(--glass);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -129,7 +129,7 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Sections */
+/* ---------- Sections ---------- */
 section {
   margin-top: 28px;
 }
@@ -151,20 +151,21 @@ section {
   font-size: 13px;
 }
 
-/* Grid layout for projects */
-.grid {
+/* ---------- Grid Layout ---------- */
+.grid,
+.photography-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 14px;
   margin-top: 14px;
 }
 
-/* Cards */
+/* ---------- Cards ---------- */
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
   padding: 14px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.03);
+  border: 1px solid var(--glass);
   display: flex;
   flex-direction: column;
 }
@@ -180,6 +181,15 @@ section {
   font-size: 14px;
 }
 
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* ---------- Meta & Chips ---------- */
 .meta {
   margin-top: 10px;
   display: flex;
@@ -188,46 +198,16 @@ section {
 }
 
 .chip {
-  background: rgba(255,255,255,0.03);
+  background: var(--glass);
   padding: 6px 8px;
   border-radius: 999px;
   font-size: 12px;
   color: var(--muted);
 }
 
-/* Project Images - show full image without cropping */
-.card img {
-  width: 100%;
-  height: auto;        /* maintain aspect ratio */
-  object-fit: contain;  /* do not crop */
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-/* Photography Grid */
-.photography-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 14px;
-  margin-top: 14px;
-}
-
+/* ---------- Photography Grid ---------- */
 .photography-grid .card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.03);
-}
-
-.photography-grid .card img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  flex-shrink: 0;
 }
 
 .photography-grid .card h3 {
@@ -237,20 +217,7 @@ section {
   color: var(--muted);
 }
 
-/* Responsive layout */
-@media (min-width: 760px) {
-  .photography-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1100px) {
-  .photography-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Resume Section */
+/* ---------- Resume Section ---------- */
 .resume {
   display: flex;
   gap: 16px;
@@ -260,17 +227,17 @@ section {
 .resume .resume-box {
   padding: 12px;
   border-radius: 10px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass);
 }
 
-/* Contact Form */
+/* ---------- Contact Form ---------- */
 .contact .input,
 .contact .textarea {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   background: #061018;
   color: inherit;
 }
@@ -286,7 +253,7 @@ section {
   cursor: pointer;
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 footer {
   margin: 36px 0 6px;
   color: var(--muted);
@@ -294,16 +261,16 @@ footer {
   font-size: 13px;
 }
 
-/* About Me Layout */
+/* ---------- About Me ---------- */
 .about-card {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  flex-wrap: wrap; /* allow stacking on small screens */
-  background: rgba(255,255,255,0.02);
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.02);
   padding: 16px;
   border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.03);
+  border: 1px solid var(--glass);
 }
 
 .about-card img {
@@ -320,88 +287,56 @@ footer {
   min-width: 250px;
 }
 
+/* ---------- Utility ---------- */
 .row {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
 }
 
-/* Responsive Layouts */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
+.spacer {
+  height: 8px;
+}
 
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
   .about-card {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   .about-card img {
     width: 80%;
     max-width: 250px;
-    height: auto;
   }
-
-  .about-card > div {
-    width: 100%;
-  }
-
-  .row {
-    justify-content: center;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  .about-card > div { width: 100%; }
+  .row { justify-content: center; }
+  .grid { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 760px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero {
-    grid-template-columns: 1fr 340px;
-  }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { grid-template-columns: 1fr 340px; }
+  .photography-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 901px) {
   .about-card {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: flex-start;
     text-align: left;
   }
-
   .about-card img {
     width: 220px;
     height: 320px;
-    object-fit: cover;
-    flex-shrink: 0;
   }
 }
 
 @media (min-width: 1100px) {
-  .container {
-    padding: 48px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Misc */
-.row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.spacer {
-  height: 8px;
+  .container { padding: 48px; }
+  .grid { grid-template-columns: repeat(3, 1fr); }
+  .photography-grid { grid-template-columns: repeat(3, 1fr); }
 }
